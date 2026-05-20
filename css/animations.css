@@ -13,9 +13,11 @@
     opacity: 0;
     transform: scale(0.95);
   }
+
   50% {
     transform: perspective(1000px) rotateX(0deg);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -30,6 +32,7 @@
     opacity: 0;
     transform: translateY(60px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -43,6 +46,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -56,6 +60,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -69,6 +74,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -80,16 +86,20 @@
  * Slow floating motion for background elements
  */
 @keyframes floatSlow {
+
   0%,
   100% {
     transform: translateY(0px) translateX(0px);
   }
+
   25% {
     transform: translateY(-15px) translateX(10px);
   }
+
   50% {
     transform: translateY(-30px) translateX(0px);
   }
+
   75% {
     transform: translateY(-15px) translateX(-10px);
   }
@@ -99,16 +109,20 @@
  * Slow floating motion - reverse
  */
 @keyframes floatSlowReverse {
+
   0%,
   100% {
     transform: translateY(0px) translateX(0px);
   }
+
   25% {
     transform: translateY(15px) translateX(-10px);
   }
+
   50% {
     transform: translateY(30px) translateX(0px);
   }
+
   75% {
     transform: translateY(15px) translateX(10px);
   }
@@ -118,10 +132,12 @@
  * Image floating - subtle cinematic
  */
 @keyframes floatImage {
+
   0%,
   100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-12px);
   }
@@ -135,9 +151,11 @@
     transform: translateY(0px);
     opacity: 0.5;
   }
+
   50% {
     opacity: 0.8;
   }
+
   100% {
     transform: translateY(-100vh);
     opacity: 0;
@@ -152,12 +170,15 @@
     transform: translateY(0) translateX(0) rotate(0deg);
     opacity: 0;
   }
+
   10% {
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(100vh) translateX(100px) rotate(360deg);
     opacity: 0;
@@ -168,16 +189,20 @@
  * Gentle floating motion
  */
 @keyframes gentleFloat {
+
   0%,
   100% {
     transform: translateY(0px) translateX(0px);
   }
+
   25% {
     transform: translateY(-10px) translateX(5px);
   }
+
   50% {
     transform: translateY(-20px) translateX(-5px);
   }
+
   75% {
     transform: translateY(-10px) translateX(5px);
   }
@@ -187,10 +212,12 @@
  * Glow pulse animation - enhanced
  */
 @keyframes glowPulse {
+
   0%,
   100% {
     box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), 0 0 40px rgba(16, 185, 129, 0.1);
   }
+
   50% {
     box-shadow: 0 0 40px rgba(16, 185, 129, 0.6), 0 0 80px rgba(16, 185, 129, 0.2);
   }
@@ -200,10 +227,12 @@
  * Subtle scale pulse - premium
  */
 @keyframes scalePulse {
+
   0%,
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.02);
   }
@@ -213,10 +242,12 @@
  * Glow text animation
  */
 @keyframes glowText {
+
   0%,
   100% {
     text-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
   }
+
   50% {
     text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
   }
@@ -228,10 +259,12 @@
  * Blinking cursor
  */
 @keyframes blink {
+
   0%,
   49% {
     opacity: 1;
   }
+
   50%,
   100% {
     opacity: 0;
@@ -245,6 +278,7 @@
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -259,6 +293,7 @@
   0% {
     box-shadow: 0 0 0 rgba(16, 185, 129, 0);
   }
+
   100% {
     box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
   }
@@ -272,6 +307,7 @@
     transform: scale(0);
     opacity: 1;
   }
+
   100% {
     transform: scale(4);
     opacity: 0;
@@ -282,16 +318,20 @@
  * Bounce animation
  */
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   25% {
     transform: translateY(-15px);
   }
+
   50% {
     transform: translateY(-25px);
   }
+
   75% {
     transform: translateY(-10px);
   }
@@ -301,10 +341,12 @@
  * Shake animation
  */
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   10%,
   30%,
   50%,
@@ -312,6 +354,7 @@
   90% {
     transform: translateX(-5px);
   }
+
   20%,
   40%,
   60%,
@@ -327,9 +370,11 @@
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.6;
   }
+
   100% {
     opacity: 1;
   }
@@ -343,9 +388,11 @@
     transform: rotateX(0deg);
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
+
   100% {
     transform: rotateX(180deg);
     opacity: 1;
@@ -361,9 +408,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -376,9 +425,11 @@
   0% {
     background-color: rgba(16, 185, 129, 0.1);
   }
+
   50% {
     background-color: rgba(52, 211, 153, 0.15);
   }
+
   100% {
     background-color: rgba(16, 185, 129, 0.1);
   }
@@ -394,6 +445,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -408,6 +460,7 @@
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -542,6 +595,7 @@
 /* ==================== RESPONSIVE ANIMATIONS ==================== */
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -557,6 +611,7 @@
       opacity: 0;
       transform: translateY(40px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -568,6 +623,7 @@
       opacity: 0;
       transform: translateY(15px);
     }
+
     100% {
       opacity: 1;
       transform: translateY(0);

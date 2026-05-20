@@ -42,7 +42,7 @@ const SITE_CONFIG = {
     // Music Configuration
     music: {
         enabled: true,
-        musicPath: "./assets/music/your-file.mp3",
+        musicPath: "./assets/music/graduation-piano.mp3",
         buttonAriaLabel: "Toggle background music",
     },
 
