@@ -250,13 +250,21 @@ section {
 /* ==================== ENVELOPE SECTION - CINEMATIC ==================== */
 
 .envelope-section {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
   overflow: hidden;
   position: relative;
+  padding: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .envelope-section {
+    min-height: auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
 }
 
 .envelope-section::before {
@@ -393,7 +401,7 @@ section {
 /* ==================== HERO SECTION - CINEMATIC FOCAL POINT ==================== */
 
 .hero-section {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -405,6 +413,13 @@ section {
   );
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding: 2rem var(--spacing-md);
+  }
 }
 
 .hero-section::before {
@@ -443,6 +458,12 @@ section {
   margin-bottom: var(--spacing-3xl);
 }
 
+@media (max-width: 768px) {
+  .hero-header {
+    margin-bottom: 1.5rem;
+  }
+}
+
 .student-name {
   color: var(--primary-color);
   font-size: var(--font-size-h1);
@@ -478,11 +499,20 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .hero-image-container {
+    margin: 2rem 0;
+  }
 }
 
 .hero-image-glow {
   position: absolute;
-  inset: -40px;
+  inset: -20px;
   background: radial-gradient(
     ellipse 60% 100% at 50% 40%,
     rgba(16, 185, 129, 0.15) 0%,
@@ -492,8 +522,15 @@ section {
   border-radius: 50%;
   animation: scalePulse 4s ease-in-out infinite;
   pointer-events: none;
-  filter: blur(20px);
+  opacity: 0.8;
   z-index: 1;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 768px) {
+  .hero-image-glow {
+    inset: -15px;
+  }
 }
 
 .hero-image {
@@ -511,6 +548,7 @@ section {
     0 20px 50px -20px rgba(0, 0, 0, 0.15);
   animation: floatImage 4s ease-in-out infinite;
   transition: transform var(--transition-premium);
+  will-change: transform;
 }
 
 .hero-image:hover {
@@ -530,6 +568,13 @@ section {
   backdrop-filter: var(--blur-md);
   box-shadow: 0 0 1px rgba(16, 185, 129, 0.1);
   transition: all var(--transition-base);
+}
+
+@media (max-width: 768px) {
+  .hero-details {
+    margin-top: 1.5rem;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
 }
 
 .hero-details:hover {
@@ -573,7 +618,7 @@ section {
 /* ==================== COUNTDOWN SECTION - PREMIUM ==================== */
 
 .countdown-section {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -585,6 +630,13 @@ section {
   );
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .countdown-section {
+    min-height: auto;
+    padding: 2rem var(--spacing-md);
+  }
 }
 
 .countdown-section::before {
@@ -617,6 +669,13 @@ section {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .countdown-container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
 .countdown-title {
   font-size: var(--font-size-h2);
   font-weight: 700;
@@ -631,12 +690,26 @@ section {
   font-weight: 500;
 }
 
+@media (max-width: 768px) {
+  .countdown-subtitle {
+    margin-bottom: 1.5rem;
+  }
+}
+
 #countdown {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: var(--spacing-lg);
   max-width: 700px;
   margin: 0 auto var(--spacing-3xl);
+}
+
+@media (max-width: 768px) {
+  #countdown {
+    max-width: 100%;
+    gap: var(--spacing-sm);
+    margin: 0 auto 1.5rem;
+  }
 }
 
 .countdown-unit {
@@ -653,6 +726,7 @@ section {
     0 0 1px rgba(16, 185, 129, 0.1),
     0 8px 24px -8px rgba(0, 0, 0, 0.08);
   transition: all var(--transition-premium);
+  will-change: transform;
 }
 
 .countdown-unit:hover {
@@ -691,14 +765,22 @@ section {
   font-size: 0.875rem;
   color: var(--primary-light);
   line-height: 1.8;
-  max-width: 550px;
+  max-width: 100%;
+  width: 90%;
   margin: var(--spacing-2xl) auto 0;
   box-shadow: 
     0 0 30px rgba(16, 185, 129, 0.15),
     inset 0 0 30px rgba(16, 185, 129, 0.05);
-  overflow-x: auto;
+  overflow: hidden;
   position: relative;
   transition: all var(--transition-base);
+}
+
+@media (max-width: 768px) {
+  .terminal-message {
+    font-size: 0.75rem;
+    padding: var(--spacing-lg);
+  }
 }
 
 .terminal-message::before {
@@ -794,6 +876,12 @@ section {
   text-align: center;
   position: relative;
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 2rem var(--spacing-md);
+  }
 }
 
 .thank-you-text {

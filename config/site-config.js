@@ -14,7 +14,7 @@ const SITE_CONFIG = {
     // Graduation Details
     graduation: {
         date: "2026-05-23", // ISO format: YYYY-MM-DD
-        time: "09:00", // 24-hour format: HH:MM
+        time: "10:00", // 24-hour format: HH:MM
         address: "Km10, Nguyen Trai Street, Ha Dong District, Hanoi.",
         schoolName: "Posts and Telecommunications Institute of Technology",
         schoolAbbr: "PTIT",
@@ -42,7 +42,7 @@ const SITE_CONFIG = {
     // Music Configuration
     music: {
         enabled: true,
-        musicPath: "assets/music/graduation-piano.mp3",
+        musicPath: "./assets/music/your-file.mp3",
         buttonAriaLabel: "Toggle background music",
     },
 
