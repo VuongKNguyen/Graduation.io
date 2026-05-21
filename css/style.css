@@ -263,7 +263,7 @@ section {
 @media (max-width: 768px) {
   .envelope-section {
     min-height: auto;
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: 1.5rem var(--spacing-md);
   }
 }
 
@@ -414,7 +414,11 @@ section {
 @media (max-width: 768px) {
   .hero-section {
     min-height: auto;
-    padding: 2rem var(--spacing-md);
+    padding: 1rem var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 1rem;
   }
 }
 
@@ -456,7 +460,7 @@ section {
 
 @media (max-width: 768px) {
   .hero-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -472,6 +476,14 @@ section {
   background-clip: text;
 }
 
+@media (max-width: 768px) {
+  .student-name {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+  }
+}
+
 .graduation-title {
   font-size: var(--font-size-h2);
   font-weight: 700;
@@ -480,12 +492,26 @@ section {
   line-height: 1.15;
 }
 
+@media (max-width: 768px) {
+  .graduation-title {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    margin-bottom: 0.5rem;
+  }
+}
+
 .graduation-subtitle {
   font-size: clamp(1rem, 3vw, 1.375rem);
   color: var(--text-secondary);
   font-weight: 500;
   margin-bottom: var(--spacing-xl);
   line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 768px) {
+  .graduation-subtitle {
+    font-size: clamp(0.95rem, 2.5vw, 1.125rem);
+    margin-bottom: 0.75rem;
+  }
 }
 
 /* Hero Image - Premium Focal Point */
@@ -502,7 +528,7 @@ section {
 
 @media (max-width: 768px) {
   .hero-image-container {
-    margin: 2rem 0;
+    margin: 0.75rem 0;
   }
 }
 
@@ -527,6 +553,114 @@ section {
   }
 }
 
+/* ==================== MOBILE HERO REFINEMENTS (MOBILE-FIRST) ==================== */
+@media (max-width: 768px) {
+  /* Make invitation card flow within content instead of absolute overlay */
+  .invitation-card {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto 1rem;
+    width: calc(100% - 2rem);
+    max-width: 320px;
+    padding: var(--spacing-md);
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,254,244,0.98));
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(16,185,129,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    z-index: 3;
+    pointer-events: auto;
+  }
+
+  /* If the invitation card remains inside the opening section, keep it small and unobtrusive */
+  .envelope-section .invitation-card {
+    max-width: 320px;
+  }
+
+  /* Tighten hero spacing and typography for mobile-first composition */
+  .hero-section {
+    padding: 1.25rem var(--spacing-md);
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    padding-top: 0.25rem;
+    text-align: center;
+  }
+
+  .hero-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .student-name {
+    font-size: clamp(1.6rem, 8vw, 2.6rem);
+    line-height: 1.05;
+    margin-bottom: 0.25rem;
+  }
+
+  .graduation-title {
+    font-size: clamp(1.1rem, 5.5vw, 1.6rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .graduation-subtitle {
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-image-container {
+    margin: 1rem 0;
+  }
+
+  .hero-image {
+    max-width: 260px;
+    width: 72%;
+  }
+
+  .hero-details {
+    margin-top: 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  /* Ensure no horizontal overflow from glow or pseudo-elements */
+  .hero-section::before,
+  .hero-section::after,
+  .hero-image-glow {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    opacity: 0.4;
+  }
+
+  /* Subtle reduce on animation intensity for mobile */
+  .hero-image-glow {
+    opacity: 0.4;
+    animation-duration: 6s;
+    inset: -12px;
+  }
+
+  /* Hide or reduce quote visibility on mobile */
+  blockquote {
+    margin-top: 0.75rem;
+  }
+
+  blockquote p {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+
+  /* Make terminal and other large components compact */
+  .terminal-message {
+    padding: var(--spacing-lg);
+    margin-top: 1rem;
+  }
+
+  /* Footer buttons stack and shrink on mobile */
+  .footer-buttons {
+    gap: var(--spacing-md);
+  }
+}
+
 .hero-image {
   position: relative;
   z-index: 2;
@@ -543,6 +677,14 @@ section {
   animation: floatImage 4s ease-in-out infinite;
   transition: transform var(--transition-premium);
   will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    max-width: 240px;
+    width: 70%;
+    border: 1.5px solid var(--primary-light);
+  }
 }
 
 .hero-image:hover {
@@ -564,8 +706,8 @@ section {
 
 @media (max-width: 768px) {
   .hero-details {
-    margin-top: 1.5rem;
-    padding: var(--spacing-md) var(--spacing-lg);
+    margin-top: 1rem;
+    padding: var(--spacing-md) var(--spacing-md);
   }
 }
 
@@ -584,6 +726,13 @@ section {
   justify-content: center;
   gap: var(--spacing-md);
   flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .detail-row {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+  }
 }
 
 .detail-row:last-child {
@@ -1050,7 +1199,7 @@ section {
   }
 
   .hero-image {
-    max-width: 200px;
+    max-width: 240px;
   }
 
   #countdown {
